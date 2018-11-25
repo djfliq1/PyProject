@@ -10,12 +10,12 @@ def main():
     while True:
         subprocess.call("git add TimerMain.py ../test.csv", shell=True)
         time.sleep(3)
-        subprocess.call("git commit -m 'Easy'", shell=True)
+        subprocess.call("git commit -m 'AutomatedPushComplete'", shell=True)
         time.sleep(3)
         subprocess.call('git push', shell=True)
         time.sleep(3)
 
-        set_time = 10800
+        set_time = 5
 
         try:
             when_to_stop = abs(int(set_time))
