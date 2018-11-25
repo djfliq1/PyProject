@@ -8,12 +8,12 @@ import subprocess
 
 def main():
     while True:
-        subprocess.call("git add test.csv", shell=True)
-        time.sleep(1)
+        subprocess.call("git add TimerMain.py ../test.csv", shell=True)
+        time.sleep(3)
         subprocess.call("git commit -m 'Easy'", shell=True)
-        time.sleep(1)
+        time.sleep(3)
         subprocess.call('git push', shell=True)
-        time.sleep(1)
+        time.sleep(3)
 
         set_time = 5
 
