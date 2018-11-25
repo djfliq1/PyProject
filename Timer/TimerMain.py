@@ -8,9 +8,10 @@ import subprocess
 
 def main():
     while True:
+        subprocess.call('git commit', shell=True)
         subprocess.call('git push', shell=True)
 
-        set_time = 10800
+        set_time = 5
 
         try:
             when_to_stop = abs(int(set_time))
