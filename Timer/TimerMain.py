@@ -52,8 +52,10 @@ def main():
         subprocess.call('git push', shell=True) # Pushes the update to the repository
         time.sleep(1)
 
-        data = open("../test.csv", 'r').read()
+        d_data = open("../test.csv", 'r')
+        data = d_data.read()
         numOfLines = len(data.splitlines())
+        d_data.close()
 
         if (numOfLines >= 20):
             file_reset()
