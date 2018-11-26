@@ -18,7 +18,7 @@ def main():
 
             for line in dataR_set:
                 clean_file.write(line)
-                print("File reset to origin.")
+                return "File reset to origin."
 
         # To break out of the loop, in your terminal you can just press ctrl+break
         except:
