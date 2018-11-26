@@ -30,7 +30,7 @@ def main():
                 numOfLines = len(dataR.splitlines())
 
                 if (numOfLines >= 20):
-                    dataW = csv_file.writelines("")
+                    dataW = csv_file.writelines(lines=0)
                     return dataW
                 else:
                     print("No reset needed at this time.\n")
