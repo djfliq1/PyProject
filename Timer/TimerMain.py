@@ -23,13 +23,16 @@ def main():
 
         try:
             # A test.csv file is used as the file to be updated.
-            with open("../test.csv", 'r+') as csv_file:
+            with open("../test.csv", 'w') as csv_file:
 
                 dataR = csv_file.read()
-                dataW = csv_file.writelines("")
                 numOfLines = len(dataR.splitlines())
 
                 if (numOfLines >= 20):
+                    for lines in csv_file:
+                        csv_file.write("")
+
+
                     print("File reset to origin.")
                 else:
                     print("No reset needed at this time.")
@@ -48,7 +51,7 @@ def main():
 
                 csv_writer.writerow("Not So Random Test Quote")
 
-                print("File Updated\n")
+                print("File Updated")
 
 # To break out of the loop, in your terminal you can just press ctrl+break
         except:
