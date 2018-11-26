@@ -27,7 +27,7 @@ def main():
 
                 dataR = csv_file.read()
                 numOfLines = len(dataR.splitlines())
-                dataW = csv_file.write(line)
+                dataW = csv_file.write(" ")
 
                 if (numOfLines >= 20):
                     for line in csv_file:
