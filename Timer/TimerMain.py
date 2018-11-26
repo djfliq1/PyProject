@@ -30,9 +30,9 @@ def main():
                 numOfLines = len(dataR.splitlines())
 
                 if (numOfLines >= 20):
-                    print("File reset to origin.\n")
+                    print("File reset to origin.")
                 else:
-                    print("No reset needed at this time.\n")
+                    print("No reset needed at this time.")
 
         # To break out of the loop, in your terminal you can just press ctrl+break
         except:
