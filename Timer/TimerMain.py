@@ -15,7 +15,7 @@ def main():
         subprocess.call('git push', shell=True)
         time.sleep(3)
 
-        set_time = 10
+        set_time = 10800
 
         try:
             when_to_stop = abs(int(set_time))
