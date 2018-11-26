@@ -26,48 +26,37 @@ def main():
             with open("../test.csv", 'r+') as csv_file:
 
                 dataR = csv_file.read()
+                dataW = csv_file.writelines("")
                 numOfLines = len(dataR.splitlines())
-                dataW = csv_file.write(" ")
-                csv_writer = csv.writer(csv_file, delimiter='\t')
 
                 if (numOfLines >= 20):
-                    for line in csv_file:
-                        csv_file.write("TesterT")
-
-                    csv_writer.writerow("Not So Random Test Quote")
-
-                    print("File Updated, file reset to origin.\n")
-
+                    print("File reset to origin.\n")
                 else:
-
-                    csv_writer.writerow("Not So Random Test Quote")
-
-                    print("File Updated, no reset needed at this time.\n")
+                    print("No reset needed at this time.\n")
 
         # To break out of the loop, in your terminal you can just press ctrl+break
         except:
             print("File Reset function malfunctioned!")
 
-#         try:
-#             when_to_stop = abs(int(set_time))
-#
-# # A test.csv file is used as the file to be updated.
-#             with open("../test.csv",'a') as csv_file:
-#                 csv_reader = csv.reader(csv_file)
-#                 csv_writer = csv.writer(csv_file, delimiter='\t')
-#
-#                 csv_writer.writerow("Not So Random Test Quote")
-#
-#                 print("File Updated\n")
-#
-# # To break out of the loop, in your terminal you can just press ctrl+break
-#         except:
-#             print("Your file/s were not updated!")
+        try:
+            when_to_stop = abs(int(set_time))
+
+# A test.csv file is used as the file to be updated.
+            with open("../test.csv",'a') as csv_file:
+                csv_reader = csv.reader(csv_file)
+                csv_writer = csv.writer(csv_file, delimiter='\t')
+
+                csv_writer.writerow("Not So Random Test Quote")
+
+                print("File Updated\n")
+
+# To break out of the loop, in your terminal you can just press ctrl+break
+        except:
+            print("Your file/s were not updated!")
 
 
 
 # Below is the structure of the countdown timer and how it will display in your terminal
-        when_to_stop = abs(int(set_time))
         while when_to_stop > 0:
             m, s = divmod(when_to_stop, 60)
             h, m = divmod(m, 60)
