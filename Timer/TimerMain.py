@@ -30,7 +30,7 @@ def main():
                 csv_writer = csv.writer(csv_file, delimiter='\t')
 
                 if (numOfLines >= 20):
-                    for line in csv_file:
+                    for line in dataR:
                         csv_writer.remove(line)
                     print("File reset to origin.")
                 else:
