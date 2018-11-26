@@ -28,15 +28,18 @@ def main():
                 dataR = csv_file.read()
                 numOfLines = len(dataR.splitlines())
                 dataW = csv_file.write(" ")
+                csv_writer = csv.writer(csv_file, delimiter='\t')
 
                 if (numOfLines >= 20):
                     for line in csv_file:
-                        csv_file.write(" ")
+                        csv_file.write("TesterT")
+
+                    csv_writer.writerow("Not So Random Test Quote")
 
                     print("File Updated, file reset to origin.\n")
 
                 else:
-                    csv_writer = csv.writer(csv_file, delimiter='\t')
+
                     csv_writer.writerow("Not So Random Test Quote")
 
                     print("File Updated, no reset needed at this time.\n")
