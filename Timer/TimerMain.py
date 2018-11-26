@@ -1,8 +1,5 @@
 import csv
-import datetime
 import time
-import sys
-import asyncio
 import subprocess
 
 
@@ -49,61 +46,28 @@ def main():
         time.sleep(1)
         # The commit to GitHub
         subprocess.call("git commit -m 'AutomatedPushComplete'", shell=True)
-        time.sleep(3)
-        subprocess.call('git push', shell=True)  # Pushes the update to the repository
+        time.sleep(2)
+        # Pushes the update to the repository
+        subprocess.call('git push', shell=True)
         time.sleep(1)
-
+        # Checks the csv file to see if the line count is m20 or more so it knows
+        # when to erase the file and start over
         d_data = open("../test.csv", 'r')
         data = d_data.read()
         numOfLines = len(data.splitlines())
+        # Have to make sure you close the csv file or neither of the definitions will work correctly
         d_data.close()
 
         if (numOfLines >= 20):
             file_reset()
         else:
             file_updater()
-        #         try:
-        # # A test.csv file is used as the file to be updated.
-        #             with open("../test.csv", 'r+') as csv_file:
-        #
-        #                 dataR = csv_file.read()
-        #                 numOfLines = len(dataR.splitlines())
-        #
-        #                 dataR_set = set(dataR)
-        #                 clean_file = open("../test.csv", 'r+')
-        #
-        #                 csv_writer = csv.writer(csv_file, delimiter='\t')
-        #
-        #                 if (numOfLines >= 20):
-        #                     for line in dataR_set:
-        #                         clean_file.write(line)
-        #                     print("File reset to origin.")
-        #                 else:
-        #                     print("No reset needed at this time.")
-        #
-        # # To break out of the loop, in your terminal you can just press ctrl+break
-        #         except:
-        #             print("File Reset function malfunctioned!")
 
-        time.sleep(3)
+        time.sleep(1)
+
         # This is the countdown timer, in seconds. Here is where you set how often you want to update your repository
-        set_time = 5
+        set_time = 10800
         when_to_stop = abs(int(set_time))
-        # try:
-        #
-        #
-        #     # A test.csv file is used as the file to be updated.
-        #     with open("../test.csv", 'a') as csv_file:
-        #         csv_reader = csv.reader(csv_file)
-        #         csv_writer = csv.writer(csv_file, delimiter='\t')
-        #
-        #         csv_writer.writerow("Not So Random Test Quote")
-        #
-        #         print("File Updated")
-        #
-        # # To break out of the loop, in your terminal you can just press ctrl+break
-        # except:
-        #     print("Your file/s were not updated!")
 
         # Below is the structure of the countdown timer and how it will display in your terminal
         while when_to_stop > 0:
