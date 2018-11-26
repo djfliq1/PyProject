@@ -26,34 +26,40 @@ def main():
             with open("../test.csv", 'r+') as csv_file:
 
                 dataR = csv_file.read()
-                dataW = csv_file.writelines()
                 numOfLines = len(dataR.splitlines())
+                dataW = csv_file.write(line)
 
                 if (numOfLines >= 20):
-                    dataW = csv_file.writelines("")
-                    return dataW
+                    for line in csv_file:
+                        return dataW
+
+                    print("File Updated, file reset to origin.\n")
+
                 else:
-                    print("No reset needed at this time.\n")
+                    csv_writer = csv.writer(csv_file, delimiter='\t')
+                    csv_writer.writerow("Not So Random Test Quote")
+
+                    print("File Updated, no reset needed at this time.\n")
 
         # To break out of the loop, in your terminal you can just press ctrl+break
         except:
             print("File Reset function malfunctioned!")
 
-        try:
-            when_to_stop = abs(int(set_time))
-
-# A test.csv file is used as the file to be updated.
-            with open("../test.csv",'a') as csv_file:
-                csv_reader = csv.reader(csv_file)
-                csv_writer = csv.writer(csv_file, delimiter='\t')
-
-                csv_writer.writerow("Not So Random Test Quote")
-
-                print("File Updated\n")
-
-# To break out of the loop, in your terminal you can just press ctrl+break
-        except:
-            print("Your file/s were not updated!")
+#         try:
+#             when_to_stop = abs(int(set_time))
+#
+# # A test.csv file is used as the file to be updated.
+#             with open("../test.csv",'a') as csv_file:
+#                 csv_reader = csv.reader(csv_file)
+#                 csv_writer = csv.writer(csv_file, delimiter='\t')
+#
+#                 csv_writer.writerow("Not So Random Test Quote")
+#
+#                 print("File Updated\n")
+#
+# # To break out of the loop, in your terminal you can just press ctrl+break
+#         except:
+#             print("Your file/s were not updated!")
 
 
 
