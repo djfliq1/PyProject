@@ -31,7 +31,7 @@ def main():
 
                 if (numOfLines >= 20):
                     for line in csv_file:
-                        return dataW
+                        csv_file.write(" ")
 
                     print("File Updated, file reset to origin.\n")
 
