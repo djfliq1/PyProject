@@ -38,7 +38,7 @@ def main():
 
         try:
             # A test.csv file is used as the file to be updated.
-            with open("../test.csv", 'w') as csv_file:
+            with open("../test.csv", 'r+') as csv_file:
 
                 dataR = csv_file.read()
                 numOfLines = len(dataR.splitlines())
