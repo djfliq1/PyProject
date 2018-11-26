@@ -17,27 +17,9 @@ def main():
         time.sleep(3)
         subprocess.call('git push', shell=True) # Pushes the update to the repository
         time.sleep(1)
-#This is the countdown timer, in seconds. Here is where you set how often you want to update your repository
-        set_time = 5
 
         try:
-            when_to_stop = abs(int(set_time))
-
 # A test.csv file is used as the file to be updated.
-            with open("../test.csv",'a') as csv_file:
-                csv_reader = csv.reader(csv_file)
-                csv_writer = csv.writer(csv_file, delimiter='\t')
-
-                csv_writer.writerow("Not So Random Test Quote")
-
-                print("File Updated")
-
-# To break out of the loop, in your terminal you can just press ctrl+break
-        except:
-            print("Your file/s were not updated!")
-
-        try:
-            # A test.csv file is used as the file to be updated.
             with open("../test.csv", 'r+') as csv_file:
 
                 dataR = csv_file.read()
@@ -55,9 +37,29 @@ def main():
                 else:
                     print("No reset needed at this time.")
 
-        # To break out of the loop, in your terminal you can just press ctrl+break
+# To break out of the loop, in your terminal you can just press ctrl+break
         except:
             print("File Reset function malfunctioned!")
+
+        time.sleep(3)
+#This is the countdown timer, in seconds. Here is where you set how often you want to update your repository
+        set_time = 5
+
+        try:
+            when_to_stop = abs(int(set_time))
+
+            # A test.csv file is used as the file to be updated.
+            with open("../test.csv", 'a') as csv_file:
+                csv_reader = csv.reader(csv_file)
+                csv_writer = csv.writer(csv_file, delimiter='\t')
+
+                csv_writer.writerow("Not So Random Test Quote")
+
+                print("File Updated")
+
+        # To break out of the loop, in your terminal you can just press ctrl+break
+        except:
+            print("Your file/s were not updated!")
 
 # Below is the structure of the countdown timer and how it will display in your terminal
         while when_to_stop > 0:
