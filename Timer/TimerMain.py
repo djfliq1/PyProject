@@ -31,7 +31,7 @@ def main():
 
                 if (numOfLines >= 20):
                     for line in csv_file:
-                        csv_writer.writerow("")
+                        csv_writer.remove(line)
 
 
                     print("File reset to origin.")
