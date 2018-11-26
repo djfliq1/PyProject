@@ -27,10 +27,11 @@ def main():
 
                 dataR = csv_file.read()
                 numOfLines = len(dataR.splitlines())
+                csv_writer = csv.writer(csv_file, delimiter='\t')
 
                 if (numOfLines >= 20):
-                    for lines in csv_file:
-                        csv_file.write("")
+                    for line in csv_file:
+                        csv_writer.writerow("")
 
 
                     print("File reset to origin.")
