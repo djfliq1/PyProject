@@ -26,7 +26,7 @@ def main():
                 numOfLines = len(dataR.splitlines())
 
                 dataR_set = set(dataR)
-                clean_file = open("../test.csv", 'w')
+                clean_file = open("../test.csv", 'r+')
 
                 csv_writer = csv.writer(csv_file, delimiter='\t')
 
