@@ -64,6 +64,7 @@ def main():
 
 
 # Below is the structure of the countdown timer and how it will display in your terminal
+        when_to_stop = abs(int(set_time))
         while when_to_stop > 0:
             m, s = divmod(when_to_stop, 60)
             h, m = divmod(m, 60)
