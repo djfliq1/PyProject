@@ -42,11 +42,15 @@ def main():
 
                 dataR = csv_file.read()
                 numOfLines = len(dataR.splitlines())
+
+                dataR_set = set(dataR)
+                clean_file = open("../test.csv", 'w')
+
                 csv_writer = csv.writer(csv_file, delimiter='\t')
 
                 if (numOfLines >= 20):
-                    for line in numOfLines:
-                        csv_writer.remove(line)
+                    for line in dataR_set:
+                        clean_file.write(line)
                     print("File reset to origin.")
                 else:
                     print("No reset needed at this time.")
