@@ -35,7 +35,7 @@ def main():
         try:
             when_to_stop = abs(int(set_time))
 
-            # A test.csv file is used as the file to be updated.
+            #test.csv file is used as the file to be updated.
             with open("../test.csv", 'a') as csv_file:
                 csv_reader = csv.reader(csv_file)
                 csv_writer = csv.writer(csv_file, delimiter='\t')
