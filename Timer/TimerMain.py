@@ -5,6 +5,11 @@ import subprocess
 
 def main():
     def file_reset():
+        """
+        This definition is to reset the csv file "test.csv".
+        The purpose is to ensure the file doesn't get so large
+        it becomes difficult to update.
+        """
         try:
             # A test.csv file is used as the file to be updated.
             with open("../test.csv", 'w') as csv_file:
@@ -23,6 +28,10 @@ def main():
             print("File reset to origin.")
 
     def file_updater():
+        """
+        This function is the heart of the contribution to github. With this function
+        you make a snippet "Not so random test" as the updated contribution.
+        """
         try:
             when_to_stop = abs(int(set_time))
 
@@ -41,7 +50,7 @@ def main():
 
     while True:
         # adds the two files to be committed
-        subprocess.call("git add TimerMain.py ../test.csv", shell=True)
+        subprocess.call("git add TimerMain.py ../test.csv README.md roboPiper.py", shell=True)
         # These timers just help slow the process down so there aren't any overlapping of processes
         time.sleep(1)
         # The commit to GitHub
