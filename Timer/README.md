@@ -1,18 +1,18 @@
 <<<<<<<PyProject
 ===
 
-###An automation project
+### An automation project
 ___
-##Version 1.01
+## Version 1.01
 The version number is arbitrary but will be used at a later date for version matching.
 If the `README.md` file version and the app versions don't match, the app will not work.
 There will be a very large number of versions
 in the actual project due to the nature of the project automation.
 ___
-##Purpose:
+## Purpose:
 The purpose of this app was to test simple automation with the use of Github.2
 ___
-##File Reset
+## File Reset
 This definition `def file_reset():` is used to reset the csv file "test.csv". 
 The purpose is to ensure the file doesn't get so large it becomes difficult
 to update. This function will only be initiated if the line count is greater
@@ -39,7 +39,7 @@ except:
     print("File reset to origin.")
 ```
 ___
-##File Updating
+## File Updating
 This function `def file_updater():` is the heart of the contribution to github. 
 With this function you make a snippet "Not so random test" as the updated
 contribution on a new line. This will occur until you reach 20 lines. This
@@ -66,7 +66,7 @@ except:
 ```
 ___
 
-##Timer
+## Timer
 The timer can be set to whatever you like. It has to be set in seconds for
 the code to write on the console in a more natural human readable format.
 When this countdown reaches zero the ` while True:` loop begins.
@@ -88,14 +88,14 @@ set_time = 7200
         print()
 ```
 ___
-##While True Loop
+## While True Loop
 When the timer reaches zero, the Github repository is prepared for
 updating and the `../test.csv` file is scanned for line count.
 If the line count is greater than 20 `def file_reset():` is
 selected. If the line count is less than 20 `def file_updater():`
 is selected.
 ___
-###Contact
+### Contact
 I only want to be the best developer I can be. If you have pointers or advice,
 please email me at: derklespunk@gmail.com
 >>>>>>> e432abfc188b66a26931619385411039300c7fd7
