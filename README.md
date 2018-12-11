@@ -10,7 +10,7 @@ There will be a very large number of versions
 in the actual project due to the nature of the project automation.
 ___
 ## Purpose:
-The purpose of this app was to test simple automation with the use of Github.2
+The purpose of this app was to test simple automation with the use of Github.
 ___
 ## File Reset
 This definition `def file_reset():` is used to reset the csv file "test.csv". 
