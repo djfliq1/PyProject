@@ -57,7 +57,7 @@ def main():
         subprocess.call("git commit -m 'AutomatedPushComplete'", shell=True)
         time.sleep(2)
         # Pushes the update to the repository
-        subprocess.call('git push', shell=True)
+        subprocess.call('git push origin', shell=True)
         time.sleep(1)
         # Checks the csv file to see if the line count is m20 or more so it knows
         # when to erase the file and start over
