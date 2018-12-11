@@ -4,7 +4,7 @@
 ### An automation project
 ___
 ## Version 1.01
-The version number is arbitrary but will be used at a later date for version matching.
+The version number is is used for version matching. `rodoPiper.py` is used to find the hash needed for the checksum required.
 If the `README.md` file version and the app versions don't match, the app will not work.
 There will be a very large number of versions
 in the actual project due to the nature of the project automation.

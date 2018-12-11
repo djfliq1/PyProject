@@ -13,7 +13,7 @@ def main():
             hasher.update(content)
         return hasher.hexdigest()
 
-    if (READEME_check_sum() == '728a437926785e3bea25a23f1dc3edc3'):
+    if (READEME_check_sum() == 'dc509fa6b5207dcfa2d7eca71149020f'):
 
 
         def file_reset():
