@@ -102,7 +102,7 @@ def main():
             print()
 
     else:
-        print('Program is corrupted.\nDoes not have the correct version.')
+        print('Program is corrupted.\nIs not the correct version.')
 
 
 if __name__ == '__main__':
