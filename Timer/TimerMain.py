@@ -50,7 +50,7 @@ def main():
 
     while True:
         # adds the two files to be committed
-        subprocess.call("git add TimerMain.py ../test.csv README.md roboPiper.py", shell=True)
+        subprocess.call("git add TimerMain.py ../test.csv ../README.md roboPiper.py", shell=True)
         # These timers just help slow the process down so there aren't any overlapping of processes
         time.sleep(1)
         # The commit to GitHub
