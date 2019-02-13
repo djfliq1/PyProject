@@ -4,7 +4,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="boiler" value="def main():&#10;    &#10;    def clue():&#10;        print(&quot;sure&quot;)&#10;    &#10;    &#10;if __name__ == '__main__':&#10;    main()&#10;" toReformat="false" toShortenFQNames="true">
+  <template name="boiler" value="from package import defi&#10;from package import clas&#10;&#10;&#10;def main():&#10;&#10;    defi.clue()&#10;&#10;    defi.dumb(8)&#10;&#10;    fart = clas.mut()&#10;&#10;    print(fart)&#10;&#10;&#10;if __name__ == '__main__':&#10;    main()&#10;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
