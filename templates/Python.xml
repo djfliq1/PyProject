@@ -1,0 +1,3 @@
+<templateSet group="Python">
+  <template name="school" value="import csv&#10;import system&#10;import time&#10;import pandas as pd&#10;import sklearn as skl" description="Just me testing shit" toReformat="true" toShortenFQNames="true" />
+</templateSet>
