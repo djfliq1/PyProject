@@ -1,3 +1,12 @@
 <templateSet group="Python">
-  <template name="school" value="import csv&#10;import system&#10;import time&#10;import pandas as pd&#10;import sklearn as skl" description="Just me testing shit" toReformat="true" toShortenFQNames="true" />
+  <template name="school" value="from filer import Definitions&#10;import csv&#10;import sys&#10;import time&#10;" description="Just me testing shit" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="boiler" value="def main():&#10;    &#10;    def clue():&#10;        print(&quot;sure&quot;)&#10;    &#10;    &#10;if __name__ == '__main__':&#10;    main()&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
